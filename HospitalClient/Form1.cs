@@ -16,5 +16,12 @@ namespace HospitalClient
         {
             InitializeComponent();
         }
+
+        private void btn_invManagement_Click(object sender, EventArgs e)
+        {
+            InventoryManagementForm inventoryManagementForm = new InventoryManagementForm();
+            inventoryManagementForm.Show();
+            this.Hide();
+        }
     }
 }

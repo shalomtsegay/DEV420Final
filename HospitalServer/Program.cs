@@ -34,6 +34,10 @@ app.MapControllers();
 
 //added
 app.MapHub<HospitalChatHub>("/hospitalchathub");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<HospitalInventoryHub>("/hospitalinventoryhub");
+});
 
 app.Run();
 

@@ -54,5 +54,44 @@ namespace HospitalClient
                 MessageBox.Show("Invalid username or password");
             }
         }
+
+        private void btn_register_Click(object sender, EventArgs e)
+        {
+            // 1. get info from the user
+            string username = textBoxUsername.Text;
+            string password = textBoxPassword.Text;
+
+            // 2. check if the user already exists
+
+            var filter = Builders<User>.Filter.Eq("username", username);
+            var existingUser = userCollection.Find(filter).FirstOrDefault();
+
+            if (existingUser == null)
+            {
+                //original registry
+
+                var user = new User
+                {
+                    Username = username,
+                    Password = password
+                };
+
+                //add it to database
+                userCollection.InsertOne(user);
+
+                MessageBox.Show("Registered Successfully");
+                textBoxUsername.Clear();
+                textBoxPassword.Clear();
+            }
+            else
+            {
+                //user already exists
+                MessageBox.Show("Username already exists");
+
+            }
+
+
+
+        }
     }
 }
