@@ -13,7 +13,7 @@ namespace HospitalServer
     public class HospitalInventoryHub : Hub
     {
         private Timer _timer;
-        private readonly string connectionString = @"Data Source=ruths-garden\SQLEXPRESS;Initial Catalog=HospitalInventoryDB;Integrated Security=True;";
+        private readonly string connectionString = @"Data Source=ruths-garden\SQLEXPRESS;Initial Catalog=HospitalDB;Integrated Security=True;";
 
         // Method to start sending inventory updates to connected clients
         public void StartInventoryUpdates()

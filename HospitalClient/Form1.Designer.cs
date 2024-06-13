@@ -31,7 +31,7 @@
             this.btn_ptManagement = new System.Windows.Forms.Button();
             this.btn_apptManangement = new System.Windows.Forms.Button();
             this.btn_invManagement = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_communications = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -44,6 +44,7 @@
             this.btn_ptManagement.TabIndex = 0;
             this.btn_ptManagement.Text = "Patient Management Portal";
             this.btn_ptManagement.UseVisualStyleBackColor = true;
+            this.btn_ptManagement.Click += new System.EventHandler(this.btn_ptManagement_Click);
             // 
             // btn_apptManangement
             // 
@@ -64,14 +65,15 @@
             this.btn_invManagement.UseVisualStyleBackColor = true;
             this.btn_invManagement.Click += new System.EventHandler(this.btn_invManagement_Click);
             // 
-            // button1
+            // btn_communications
             // 
-            this.button1.Location = new System.Drawing.Point(170, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Hospital Communications";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_communications.Location = new System.Drawing.Point(170, 152);
+            this.btn_communications.Name = "btn_communications";
+            this.btn_communications.Size = new System.Drawing.Size(113, 37);
+            this.btn_communications.TabIndex = 3;
+            this.btn_communications.Text = "Hospital Communications";
+            this.btn_communications.UseVisualStyleBackColor = true;
+            this.btn_communications.Click += new System.EventHandler(this.btn_communications_Click);
             // 
             // button2
             // 
@@ -98,7 +100,7 @@
             this.ClientSize = new System.Drawing.Size(321, 271);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_communications);
             this.Controls.Add(this.btn_invManagement);
             this.Controls.Add(this.btn_apptManangement);
             this.Controls.Add(this.btn_ptManagement);
@@ -114,7 +116,7 @@
         private System.Windows.Forms.Button btn_ptManagement;
         private System.Windows.Forms.Button btn_apptManangement;
         private System.Windows.Forms.Button btn_invManagement;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_communications;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
     }

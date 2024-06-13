@@ -23,5 +23,19 @@ namespace HospitalClient
             inventoryManagementForm.Show();
             this.Hide();
         }
+
+        private void btn_communications_Click(object sender, EventArgs e)
+        {
+            CommunicationsForm communicationsForm = new CommunicationsForm();
+            communicationsForm.Show();
+            this.Hide();
+        }
+
+        private void btn_ptManagement_Click(object sender, EventArgs e)
+        {
+            PatientManagementForm patientManagementForm = new PatientManagementForm();
+            patientManagementForm.Show();
+            this.Hide();
+        }
     }
 }

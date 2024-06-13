@@ -15,12 +15,16 @@ namespace HospitalClient
         public string UserID { get; set; }
 
         [BsonElement("username"), BsonRepresentation(MongoDB.Bson.BsonType.String)]
-        // username
+        //username
         public string Username { get; set; }
 
         [BsonElement("password"), BsonRepresentation(MongoDB.Bson.BsonType.String)]
         //password
         public string Password { get; set; }
+
+        [BsonElement("role"), BsonRepresentation(MongoDB.Bson.BsonType.String)]
+        //role
+        public string Role { get; set; }
 
 
     }

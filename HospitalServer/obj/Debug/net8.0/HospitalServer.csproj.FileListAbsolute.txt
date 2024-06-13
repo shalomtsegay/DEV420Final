@@ -32,14 +32,6 @@ C:\Users\ruths\OneDrive\Desktop\DEV420\HospitalServer\HospitalServer\obj\Debug\n
 C:\Users\ruths\OneDrive\Desktop\DEV420\HospitalServer\HospitalServer\obj\Debug\net8.0\HospitalServer.pdb
 C:\Users\ruths\OneDrive\Desktop\DEV420\HospitalServer\HospitalServer\obj\Debug\net8.0\HospitalServer.genruntimeconfig.cache
 C:\Users\ruths\OneDrive\Desktop\DEV420\HospitalServer\HospitalServer\obj\Debug\net8.0\ref\HospitalServer.dll
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.csproj.AssemblyReference.cache
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.AssemblyInfoInputs.cache
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.AssemblyInfo.cs
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.csproj.CoreCompileInputs.cache
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.sourcelink.json
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\appsettings.json
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\HospitalServer.exe
@@ -47,6 +39,8 @@ C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\HospitalServer.runtimeconfig.json
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\HospitalServer.dll
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\HospitalServer.pdb
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\AWSSDK.Core.dll
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\AWSSDK.SimpleSystemsManagement.dll
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -59,6 +53,14 @@ C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.csproj.AssemblyReference.cache
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.AssemblyInfoInputs.cache
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.AssemblyInfo.cs
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.csproj.CoreCompileInputs.cache
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.sourcelink.json
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\staticwebassets\msbuild.HospitalServer.Microsoft.AspNetCore.StaticWebAssets.props
@@ -73,5 +75,3 @@ C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.pdb
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\HospitalServer.genruntimeconfig.cache
 C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\obj\Debug\net8.0\ref\HospitalServer.dll
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\AWSSDK.Core.dll
-C:\Users\ruths\OneDrive\Desktop\DEV420\DEV420Final\HospitalServer\bin\Debug\net8.0\AWSSDK.SimpleSystemsManagement.dll
