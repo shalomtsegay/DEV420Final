@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HospitalDB" Class="HospitalDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ruths-garden\sqlexpress;Initial Catalog=HospitalDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="HospitalClient.Properties.Settings" SettingsPropertyName="HospitalDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AppointmentTable" Member="AppointmentTables">
+    <Type Name="AppointmentTable">
+      <Column Name="appid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="patientid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="appday" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="apptime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Threshold" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patients" Member="Patients">
+    <Type Name="Patient">
+      <Column Name="PatientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalHistory" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

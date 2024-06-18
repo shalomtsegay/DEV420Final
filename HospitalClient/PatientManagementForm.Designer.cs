@@ -41,6 +41,7 @@
             this.label_LastName = new System.Windows.Forms.Label();
             this.label_DateOfBirth = new System.Windows.Forms.Label();
             this.label_MedicalHistory = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,28 +97,29 @@
             // 
             this.textBox_FirstName.Location = new System.Drawing.Point(120, 20);
             this.textBox_FirstName.Name = "textBox_FirstName";
-            this.textBox_FirstName.Size = new System.Drawing.Size(200, 20);
+            this.textBox_FirstName.Size = new System.Drawing.Size(225, 20);
             this.textBox_FirstName.TabIndex = 5;
             // 
             // textBox_LastName
             // 
             this.textBox_LastName.Location = new System.Drawing.Point(120, 60);
             this.textBox_LastName.Name = "textBox_LastName";
-            this.textBox_LastName.Size = new System.Drawing.Size(200, 20);
+            this.textBox_LastName.Size = new System.Drawing.Size(225, 20);
             this.textBox_LastName.TabIndex = 6;
             // 
             // dateTimePickerDOB
             // 
             this.dateTimePickerDOB.Location = new System.Drawing.Point(120, 100);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
-            this.dateTimePickerDOB.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDOB.Size = new System.Drawing.Size(225, 20);
             this.dateTimePickerDOB.TabIndex = 7;
             // 
             // textBox_MedicalHistory
             // 
             this.textBox_MedicalHistory.Location = new System.Drawing.Point(120, 140);
+            this.textBox_MedicalHistory.Multiline = true;
             this.textBox_MedicalHistory.Name = "textBox_MedicalHistory";
-            this.textBox_MedicalHistory.Size = new System.Drawing.Size(200, 20);
+            this.textBox_MedicalHistory.Size = new System.Drawing.Size(225, 42);
             this.textBox_MedicalHistory.TabIndex = 8;
             // 
             // label_FirstName
@@ -156,11 +158,22 @@
             this.label_MedicalHistory.TabIndex = 12;
             this.label_MedicalHistory.Text = "Medical History";
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(661, 446);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(114, 23);
+            this.btn_back.TabIndex = 22;
+            this.btn_back.Text = "Back to Main Menu";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // PatientManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(782, 473);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label_MedicalHistory);
             this.Controls.Add(this.label_DateOfBirth);
             this.Controls.Add(this.label_LastName);
@@ -197,5 +210,6 @@
         private System.Windows.Forms.Label label_LastName;
         private System.Windows.Forms.Label label_DateOfBirth;
         private System.Windows.Forms.Label label_MedicalHistory;
+        private System.Windows.Forms.Button btn_back;
     }
 }

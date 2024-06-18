@@ -57,7 +57,7 @@ namespace HospitalClient
             }
         }
 
-        //set up the datagrid view with the needed columns and column sizes
+        // set up the datagrid view with the needed columns and column sizes
         private void SetupDataGridView()
         {            
             dataGridView_Inventory.Columns.Add("ItemName", "Item Name");
@@ -71,6 +71,36 @@ namespace HospitalClient
             this.Controls.Add(dataGridView_Inventory);
         }
 
+        // add to inventory, invoke method to update the inventory according to the number in the textbox and the method             
+        private async void btn_add_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Inventory.SelectedRows.Count > 0 && int.TryParse(textBox_quantity.Text, out int quantityToAdd))
+            {
+                var selectedRow = dataGridView_Inventory.SelectedRows[0];
+                var itemName = selectedRow.Cells["ItemName"].Value.ToString();
+                await _connection.InvokeAsync("UpdateInventory", itemName, quantityToAdd);
+            }
+        }
+
+        // remove from inventory, invoke method to update the inventory according to the number in the textbox and the method  
+        private async void btn_remove_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Inventory.SelectedRows.Count > 0 && int.TryParse(textBox_quantity.Text, out int quantityToRemove))
+            {
+                var selectedRow = dataGridView_Inventory.SelectedRows[0];
+                var itemName = selectedRow.Cells["ItemName"].Value.ToString();
+                await _connection.InvokeAsync("UpdateInventory", itemName, -quantityToRemove);
+            }
+        }
+
+        // back to main
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Form1 staffForm = new Form1();
+            staffForm.Show();
+            this.Hide();
+        }
+
         //class for inventoryItem,
         public class InventoryItem
         {
@@ -79,6 +109,8 @@ namespace HospitalClient
             public int Quantity { get; set; }
             public int Threshold { get; set; }
         }
+
+        
     }
 }
 

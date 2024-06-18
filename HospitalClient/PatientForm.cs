@@ -19,8 +19,9 @@ namespace HospitalClient
 
         private void btn_apptManangement_Click(object sender, EventArgs e)
         {
-            // Logic for Appointment Management
-            MessageBox.Show("Navigating to Appointment Management Portal");
+            AppointmentsForm appointmentsForm = new AppointmentsForm();
+            appointmentsForm.Show();
+            this.Hide();
         }
 
         private void btn_communications_Click(object sender, EventArgs e)

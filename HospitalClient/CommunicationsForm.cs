@@ -21,6 +21,7 @@ namespace HospitalClient
             InitializeSignalR();
         }
 
+        // initialization, gives the direction on how to display messages being received
         private async void InitializeSignalR()
         {
             connection = new HubConnectionBuilder()
@@ -40,7 +41,6 @@ namespace HospitalClient
             try
             {
                 await connection.StartAsync();
-                MessageBox.Show("Connection to Hub was successful");
             }
             catch (Exception ex)
             {
@@ -48,6 +48,7 @@ namespace HospitalClient
             }
         }
 
+        // send button, invokes sendMessage method
         private async void btn_send_Click(object sender, EventArgs e)
         {
             // Sending messages
@@ -69,6 +70,14 @@ namespace HospitalClient
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        // back to main
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Form1 staffForm = new Form1();
+            staffForm.Show();
+            this.Hide();
         }
     }
 }

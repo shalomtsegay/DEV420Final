@@ -128,6 +128,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
@@ -234,11 +235,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentsForm.Designer.cs">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommunicationsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CommunicationsForm.Designer.cs">
       <DependentUpon>CommunicationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalyticsForm.Designer.cs">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -247,6 +260,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HospitalContext.cs" />
+    <Compile Include="HospitalDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataClasses.dbml</DependentUpon>
+    </Compile>
     <Compile Include="InventoryItem.cs" />
     <Compile Include="InventoryManagementForm.cs">
       <SubType>Form</SubType>
@@ -276,8 +294,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="AppointmentsForm.resx">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommunicationsForm.resx">
       <DependentUpon>CommunicationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyticsForm.resx">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -303,6 +327,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="HospitalDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HospitalDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataClasses.dbml.layout">
+      <DependentUpon>HospitalDataClasses.dbml</DependentUpon>
+    </None>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
     <None Include="packages.config" />
@@ -324,6 +356,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mongocrypt.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.8.2\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.8.2\build\MongoDB.Libmongocrypt.targets')" />

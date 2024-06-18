@@ -33,6 +33,7 @@
             this.textBoxMessage = new System.Windows.Forms.TextBox();
             this.listBoxMessages = new System.Windows.Forms.ListBox();
             this.btn_send = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,6 +70,7 @@
             // 
             // listBoxMessages
             // 
+            this.listBoxMessages.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.listBoxMessages.FormattingEnabled = true;
             this.listBoxMessages.Location = new System.Drawing.Point(15, 80);
             this.listBoxMessages.Name = "listBoxMessages";
@@ -85,11 +87,22 @@
             this.btn_send.UseVisualStyleBackColor = true;
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(366, 376);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(114, 23);
+            this.btn_back.TabIndex = 22;
+            this.btn_back.Text = "Back to Main Menu";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // CommunicationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 400);
+            this.ClientSize = new System.Drawing.Size(489, 407);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_send);
             this.Controls.Add(this.listBoxMessages);
             this.Controls.Add(this.textBoxMessage);
@@ -111,5 +124,6 @@
         private System.Windows.Forms.TextBox textBoxMessage;
         private System.Windows.Forms.ListBox listBoxMessages;
         private System.Windows.Forms.Button btn_send;
+        private System.Windows.Forms.Button btn_back;
     }
 }
