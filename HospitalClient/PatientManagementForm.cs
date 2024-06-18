@@ -22,10 +22,13 @@ namespace HospitalClient
 
         private void PatientManagementForm_Load(object sender, EventArgs e)
         {
+            // load patients to the datagridview on form load
             LoadPatients();
             MessageBox.Show("Patients loaded successfully.");
         }
 
+        // load patients method. simple query to generate all needed data and set
+        // it as the datagridview's datasource.
         private void LoadPatients()
         {
             var loadPatients = from patient in _context.Patients
@@ -41,10 +44,12 @@ namespace HospitalClient
             dataGridViewPatients.DataSource = loadPatients.ToList();
         }
 
+        // add button. take new inputs from textboxes etc. and create a new patient from them.
         private void btn_Add_Click(object sender, EventArgs e)
         {
             Patient newPatient = new Patient
             {
+                // add from textboxes, DOB, and History
                 FirstName = textBox_FirstName.Text,
                 LastName = textBox_LastName.Text,
                 DateOfBirth = dateTimePickerDOB.Value,
@@ -55,6 +60,7 @@ namespace HospitalClient
             int changes = _context.SaveChanges();
             LoadPatients();
 
+            // troubleshooting to make sure a change occured. 
             if (changes > 0)
             {
                 MessageBox.Show("Patient added successfully.");
@@ -65,6 +71,8 @@ namespace HospitalClient
             }
         }
 
+        // update button. 1. select row of patient you want to update.  
+        // 2. input new information 3. click update button
         private void btn_Update_Click(object sender, EventArgs e)
         {
             if (dataGridViewPatients.SelectedRows.Count > 0)
@@ -74,6 +82,7 @@ namespace HospitalClient
 
                 if (patient != null)
                 {
+                    // grab new data from textboxes, DOB dateTime, and history
                     patient.FirstName = textBox_FirstName.Text;
                     patient.LastName = textBox_LastName.Text;
                     patient.DateOfBirth = dateTimePickerDOB.Value;
@@ -82,6 +91,7 @@ namespace HospitalClient
                     int changes = _context.SaveChanges();
                     LoadPatients();
 
+                    // troubleshooting to make sure a change occured.
                     if (changes > 0)
                     {
                         MessageBox.Show("Patient updated successfully.");
@@ -94,6 +104,7 @@ namespace HospitalClient
             }
         }
 
+        //delete button. 1. select row of patient you want to delete. 2. click delete.
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             if (dataGridViewPatients.SelectedRows.Count > 0)
@@ -107,6 +118,7 @@ namespace HospitalClient
                     int changes = _context.SaveChanges();
                     LoadPatients();
 
+                    // troubleshooting to make sure a change occured.
                     if (changes > 0)
                     {
                         MessageBox.Show("Patient deleted successfully.");
@@ -121,24 +133,16 @@ namespace HospitalClient
 
         private void btn_Load_Click(object sender, EventArgs e)
         {
+            //calls loadPatients method
             LoadPatients();
         }
-
-        private void dataGridViewPatients_SelectionChanged(object sender, EventArgs e)
+        
+        //back to main 
+        private void btn_back_Click(object sender, EventArgs e)
         {
-            if (dataGridViewPatients.SelectedRows.Count > 0)
-            {
-                int patientId = (int)dataGridViewPatients.SelectedRows[0].Cells[0].Value;
-                var patient = _context.Patients.Find(patientId);
-
-                if (patient != null)
-                {
-                    textBox_FirstName.Text = patient.FirstName;
-                    textBox_LastName.Text = patient.LastName;
-                    dateTimePickerDOB.Value = patient.DateOfBirth;
-                    textBox_MedicalHistory.Text = patient.MedicalHistory;
-                }
-            }
+            Form1 staffForm = new Form1();
+            staffForm.Show();
+            this.Hide();
         }
     }
 }

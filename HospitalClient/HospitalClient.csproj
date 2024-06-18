@@ -235,8 +235,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appointments.cs">
+    <Compile Include="AppointmentsForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentsForm.Designer.cs">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CommunicationsForm.cs">
       <SubType>Form</SubType>
@@ -244,10 +247,11 @@
     <Compile Include="CommunicationsForm.Designer.cs">
       <DependentUpon>CommunicationsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataClasses1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    <Compile Include="AnalyticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalyticsForm.Designer.cs">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -256,6 +260,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HospitalContext.cs" />
+    <Compile Include="HospitalDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataClasses.dbml</DependentUpon>
+    </Compile>
     <Compile Include="InventoryItem.cs" />
     <Compile Include="InventoryManagementForm.cs">
       <SubType>Form</SubType>
@@ -285,11 +294,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="Appointments.resx">
-      <DependentUpon>Appointments.cs</DependentUpon>
+    <EmbeddedResource Include="AppointmentsForm.resx">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommunicationsForm.resx">
       <DependentUpon>CommunicationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyticsForm.resx">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -315,13 +327,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DataClasses1.dbml">
+    <None Include="HospitalDataClasses.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <LastGenOutput>HospitalDataClasses.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    <None Include="HospitalDataClasses.dbml.layout">
+      <DependentUpon>HospitalDataClasses.dbml</DependentUpon>
     </None>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />

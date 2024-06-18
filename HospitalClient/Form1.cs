@@ -37,5 +37,19 @@ namespace HospitalClient
             patientManagementForm.Show();
             this.Hide();
         }
+
+        private void btn_apptManangement_Click(object sender, EventArgs e)
+        {
+            AppointmentsForm appointmentsForm = new AppointmentsForm();
+            appointmentsForm.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AnalyticsForm dataForm = new AnalyticsForm();
+            dataForm.Show();
+            this.Hide();
+        }
     }
 }

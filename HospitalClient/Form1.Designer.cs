@@ -54,6 +54,7 @@
             this.btn_apptManangement.TabIndex = 1;
             this.btn_apptManangement.Text = "Appointment Management Portal";
             this.btn_apptManangement.UseVisualStyleBackColor = true;
+            this.btn_apptManangement.Click += new System.EventHandler(this.btn_apptManangement_Click);
             // 
             // btn_invManagement
             // 
@@ -83,6 +84,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Data Analytics Portal";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 

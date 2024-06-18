@@ -26,11 +26,11 @@ namespace HospitalClient.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=desktop-17tntl7\\sqlexpress;Initial Catalog=HospitalInventoryDB;Integr" +
-            "ated Security=True;TrustServerCertificate=True")]
-        public string HospitalInventoryDBConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ruths-garden\\sqlexpress;Initial Catalog=HospitalDB;Integrated Securit" +
+            "y=True;Encrypt=True;TrustServerCertificate=True")]
+        public string HospitalDBConnectionString {
             get {
-                return ((string)(this["HospitalInventoryDBConnectionString"]));
+                return ((string)(this["HospitalDBConnectionString"]));
             }
         }
     }

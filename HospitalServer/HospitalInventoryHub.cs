@@ -63,6 +63,24 @@ namespace HospitalServer
             return inventoryItems;
         }
 
+        public async Task UpdateInventory(string itemName, int quantityChange)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (var command = new SqlCommand("UPDATE Inventory SET Quantity = Quantity + @QuantityChange WHERE Name = @Name", connection))
+                {
+                    command.Parameters.AddWithValue("@QuantityChange", quantityChange);
+                    command.Parameters.AddWithValue("@Name", itemName);
+                    await command.ExecuteNonQueryAsync();
+                }
+            }
+
+            var updatedInventoryStock = GetInventoryStock();
+            await Clients.All.SendAsync("ReceiveInventoryStock", updatedInventoryStock);
+        }
+
+
         // Method called when a client disconnects
         public override async Task OnDisconnectedAsync(Exception exception)
         {
